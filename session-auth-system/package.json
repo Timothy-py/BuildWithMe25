@@ -1,0 +1,25 @@
+{
+  "name": "session-auth-system",
+  "version": "1.0.0",
+  "description": "Password-based authentication system with session",
+  "main": "index.ts",
+  "scripts": {
+    "start:prod": "node ./dist/src/index.js",
+    "start:dev": "nodemon",
+    "build": "tsc",
+    "test": "NODE_ENV=test jest --coverage"
+  },
+  "author": "BuildWithMe Guys",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  }
+}
