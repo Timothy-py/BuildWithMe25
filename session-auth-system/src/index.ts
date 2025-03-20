@@ -1,7 +1,8 @@
 import express from 'express';
 import authRouter from './routes/auth.route';
+import { config } from './common/config';
 
-const PORT = process.env.PORT || 3000;
+const PORT = config.server.port;
 const BASE_PATH = "/api/v1";
 
 const app = express();
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // ROUTES
-app.use('/auth', authRouter)
+app.use(`${BASE_PATH}/auth`, authRouter)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

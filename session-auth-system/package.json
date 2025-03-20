@@ -12,12 +12,13 @@
   "author": "BuildWithMe Guys",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.7",
+    "dotenv-safe": "^9.1.0",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
+    "@types/dotenv-safe": "^8.1.6",
     "@types/express": "^5.0.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.2"
