@@ -21,4 +21,8 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+async function main() {
+  // ... you will write your Prisma Client queries here
+}
+
 export default app;

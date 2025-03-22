@@ -12,6 +12,7 @@
   "author": "BuildWithMe Guys",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.5.0",
     "dotenv-safe": "^9.1.0",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
