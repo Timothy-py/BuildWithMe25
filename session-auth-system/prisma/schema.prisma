@@ -14,26 +14,42 @@ datasource db {
 }
 
 model User {
-  id     Int    @id @default(autoincrement())
-  name   String
-  email  String
-  age    Int
-  gender Gender
+  id       Int      @id @default(autoincrement())
+  profile  Profile?
+  password String
+  posts    Post[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt()
 }
 
-model School {
+model Profile {
   id      Int    @id @default(autoincrement())
-  name    String
+  email   String
   address String
+  name    String
+  DOB     String
+  age     Int
+  status  Status
+  userId  Int    @unique
+  user    User   @relation(references: [id], fields: [userId])
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt()
 }
 
-enum Gender {
-  MALE
-  FEMALE
+model Post {
+  id     Int    @id @default(autoincrement())
+  title  String
+  body   String
+  userId Int
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt()
+}
+
+enum Status {
+  AVAILABLE
+  UNAVAILABLE
 }
